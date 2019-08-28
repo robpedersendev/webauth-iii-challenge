@@ -1,9 +1,11 @@
 const router = require("express").Router();
 const bcrypt = require("bcryptjs");
 
+const genToken = require("../token");
+
 const jwt = require("jsonwebtoken");
 
-const Users = require("../users/users-model.js");
+const Users = require("../db-model/users-model");
 
 // for endpoints beginning with /api/auth
 router.post("/register", (req, res) => {
