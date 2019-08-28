@@ -1,4 +1,10 @@
 {
+  "name": "webauth-iii-challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/robpedersendev/webauth-iii-challenge.git",
+  "author": "RobertPedersenDev <40696979+robpedersendev@users.noreply.github.com>",
+  "license": "MIT",
   "dependencies": {
     "bcrypt": "^3.0.6",
     "cors": "^2.8.5",
