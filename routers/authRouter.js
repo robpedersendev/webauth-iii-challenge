@@ -5,7 +5,7 @@ const genToken = require("../token");
 
 const jwt = require("jsonwebtoken");
 
-const Users = require("../db-model/users-model");
+const Users = require("../db-model");
 
 // for endpoints beginning with /api/auth
 router.post("/register", (req, res) => {
@@ -44,18 +44,4 @@ router.post("/login", (req, res) => {
     });
 });
 
-function genToken(user) {
-  const payload = {
-    subject: "user",
-    username: user.username
-  };
-
-  const secret = "secrets.jwtSecret";
-
-  const options = {
-    expiresIn: "1h"
-  };
-
-  return jwt.sign(payload, secret, options);
-}
 module.exports = router;
