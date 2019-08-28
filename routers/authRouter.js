@@ -36,11 +36,11 @@ router.post("/login", (req, res) => {
           token
         });
       } else {
-        res.status(401).json({ message: "Invalid Credentials" });
+        res.status(401).json({ message: "You Shall not pass" });
       }
     })
     .catch(error => {
-      res.status(500).json(error);
+      res.status(500).json({ message: error });
     });
 });
 

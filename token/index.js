@@ -1,7 +1,8 @@
 function genToken(user) {
   const payload = {
     subject: "user",
-    username: user.username
+    username: user.username,
+    sub: user.id
   };
 
   const secret = "secrets.jwtSecret";
