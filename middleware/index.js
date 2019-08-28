@@ -12,7 +12,7 @@ module.exports = (req, res, next) => {
     jwt.verify(token, secrets.jwtSecret, (err, decodedToken) => {
       if (err) {
         //Bad Token!
-        res.status(401).json({ message: "What happened" });
+        res.status(401).json({ message: "Token error - Middleware" });
       } else {
         //The token is a good token!
         req.decodedJwt = decodedToken;
@@ -20,6 +20,6 @@ module.exports = (req, res, next) => {
       }
     });
   } else {
-    res.status(401).json({ message: "No Token Bruh" });
+    res.status(401).json({ message: "You Shall No pass - Middleware" });
   }
 };
