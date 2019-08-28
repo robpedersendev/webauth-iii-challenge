@@ -5,6 +5,10 @@
   "repository": "https://github.com/robpedersendev/webauth-iii-challenge.git",
   "author": "RobertPedersenDev <40696979+robpedersendev@users.noreply.github.com>",
   "license": "MIT",
+  "scripts": {
+    "server": "nodemon",
+    "start": "node index.js"
+  },
   "dependencies": {
     "bcrypt": "^3.0.6",
     "cors": "^2.8.5",
